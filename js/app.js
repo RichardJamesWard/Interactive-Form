@@ -242,9 +242,8 @@ $('form').submit(function (event){
 
 	// If error count equals 0, all required fields are entered correctly 
 	}  else if (errorCount === 0) {
-		validMessage ="<h2>Thanks for registering for Full Stack Conf! Your details have been accepted</h2>";
-		document.getElementById('validation-message').innerHTML = validMessage;
-		$('form > fieldset').prop("disabled", true);
+		alert("Thanks for registering for Full Stack Conf! Your details have been accepted");
+		 $(this).unbind('submit').submit()
 	}
 
 		// Print validation message to the form 
